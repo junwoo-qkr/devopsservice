@@ -21,7 +21,6 @@ jobs:
                   script_stop: true
                   script: |
                       cd /home/ubuntu/devopsservice
-                      rm -rf src/main/resources/application.yaml
                       git pull origin main
                       echo "$APPLICATION_PROPERTIES" > src/main/resources/application.yaml
                       ./gradlew clean build
